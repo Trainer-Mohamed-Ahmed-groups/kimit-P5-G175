@@ -1,102 +1,29 @@
-/*
-- dash OR hyphen
-_ underscore
-' single quote
-" double quote
-/ slash
-\ backslash
-| pipe
-{ curly brace OR mustache
-[ bracket OR hard bracket
-( parentheses
-* asterisk 
-, comma
-; semi colon
-: colon
-*/
-
-:root {
-    font-size: 18px;
-    --main_color: #0F0;
-    --nav_bg: #0fa2a9;
-    --nav_bg2: #949217
-}
-
 body {
-    height: 5000px;
+    height: 8000px;
 }
 
 * {
-    font-weight: bold
+    box-sizing: border-box;
 }
 
-.parent,
-.parent_two {
-    font-size: 2rem;
-    /*em: 32px && rem : 32px*/
-    color: var(--main_color)
-}
-
-.child {
-    font-size: 1.5rem;
-    /*em : 45 px && rem : 24px*/
-    color: var(--main_color)
-}
-
-.bg_explain {
-    height: 400px;
-    background: url(../images/bg_large.jpg) center no-repeat fixed;
-    /* background-image: url(../images/bg_sm.jpg);
-    background-color: #F00;
-    background-repeat: repeat-x;
-    background-position: right top; 
-    background-size: cover; */
-    /* background-attachment: fixed; */
-}
-
-.gradient {
+.radius_explain {
     height: 200px;
     width: 200px;
-    background-image: linear-gradient(50deg, #F00, #00F), url(../images/bg_large.jpg);
-    /* background-image: linear-gradient(50deg, #F00, #00F); */
-
-    /* background-image: repeating-linear-gradient(45deg, #F00, #00F 25%); */
-
-    /* background-image: radial-gradient(#F00, #00F); */
-    /* background-image: repeating-radial-gradient(#F00, #00F 25%); */
-
-
-    background-image: conic-gradient(#F00, #00F)
+    background-color: #DDD;
+    border-radius: 0 50% 50% 0;
 }
 
-nav {
-    background-image: linear-gradient(var(--nav_bg), var(--nav_bg2));
-    height: 70px;
+.spacing {
+    height: 200px;
+    width: 200px;
+    background-color: #080;
+    /* margin: 10px; */
+    /* margin-left: 70px; */
+    /* margin-inline-start: 70px; */
+    padding: 10px;
 }
 
-.home {
-    color: #f8b703
-}
-
-.about {
-    color: #c1a7b0
-}
-
-.contact {
-    color: #7d3865
-}
-
-.intro {
-    height: calc(100vh - 70px);
-    background: linear-gradient(#eeeeee2d, #cccccc52), url(../images/bg_large.jpg) center no-repeat fixed;
-    background-size: cover
-}
-
-.border_explain {
-    height: 150px;
-    width: 150px;
-    /* border-color: #F00 #00F #080 #EEE;
-    border-width: 19px 15px 2px 40px;
-    border-style: dotted solid groove inset; */
-    border: 3px solid #4e4e4e
+.test ~ .child {
+    font-size: 2rem;
+    color: red
 }
