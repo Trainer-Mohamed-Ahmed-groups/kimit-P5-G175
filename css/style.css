@@ -1,3 +1,7 @@
+:root {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 8000px;
 }
@@ -6,24 +10,60 @@ body {
     box-sizing: border-box;
 }
 
-.radius_explain {
-    height: 200px;
-    width: 200px;
-    background-color: #DDD;
-    border-radius: 0 50% 50% 0;
+li {
+    color: aqua
 }
 
-.spacing {
-    height: 200px;
-    width: 200px;
-    background-color: #080;
-    /* margin: 10px; */
-    /* margin-left: 70px; */
-    /* margin-inline-start: 70px; */
-    padding: 10px;
-}
-
-.test ~ .child {
-    font-size: 2rem;
+li::marker {
     color: red
 }
+
+.child {
+    height: 70px;
+    margin: 10px;
+    background-color: #DDD;
+    text-align: center;
+    color: #FFF;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.child:first-of-type {
+    font-weight: bold;
+    background-color: #080;
+}
+
+section {
+    height: 800px;
+}
+
+section:target {
+    background-color: #CCC;
+}
+
+.element::first-letter {
+    font-size: 3rem;
+    color: #0F0
+}
+
+.element::first-line {
+    background-color: #F00
+}
+
+.element::selection {
+    color: #DDD;
+    background-color: #4e4e4e;
+}
+
+.second::before {
+    content:"from css ";
+    color:red;
+    font-weight: bold;
+}
+
+.second::after {
+    content:"from css "
+}
+
+
+/* Idea about After and before */
