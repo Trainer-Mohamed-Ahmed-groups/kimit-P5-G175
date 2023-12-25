@@ -10,60 +10,132 @@ body {
     box-sizing: border-box;
 }
 
+.menu {
+    height: 40px;
+    width: 120px;
+    background-color: #eee;
+    color: #4e4e4e;
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+.menu::after {
+    content: "From css";
+    height: 70px;
+    width: 70px;
+    background-color: #F00;
+    margin-top: 10px;
+    display: none;
+}
+
+.menu:hover::after {
+    display: block;
+}
+
+/* ********************************** */
+.parent .child {
+    display: none;
+}
+
+.parent:hover .child {
+    display: block;
+}
+
+a[target='_blank'] {
+    font-size: 2rem;
+}
+
+.show {
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+.show span {
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #F00;
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+    display: inline-block;
+}
+
+i {
+    font-size: 4rem;
+    color: #4e4e4e;
+}
+
+.fa-google {
+    color: #ea4335
+}
+
+.fa-google:hover {
+    color: #4285f4
+}
+
 li {
-    color: aqua
+    background-color: #080;
+    list-style-position: inside;
+    list-style-type: disclosure-open;
+    /* list-style-image: url(../images/bg_sm.jpg); */
+    /* list-style: armenian; */
+    padding: 20px;
+    font-size: 2rem;
 }
 
 li::marker {
-    color: red
+    color: #F00;
 }
 
-.child {
-    height: 70px;
-    margin: 10px;
-    background-color: #DDD;
-    text-align: center;
-    color: #FFF;
-    font-size: 2rem;
-    padding-top: 10px;
+table,
+th,
+td {
+    border: 1px solid #33e3ee;
+    border-collapse: collapse;
 }
 
-.child:first-of-type {
-    font-weight: bold;
+table {
+    caption-side: bottom;
+}
+
+.float_parent {
+    /* height: 400px; */
     background-color: #080;
 }
 
-section {
-    height: 800px;
+.float_parent .child {
+    height: 100px;
+    width: 100px;
+    color: #F00;
+    background-color: #898989;
+    float: left;
 }
 
-section:target {
-    background-color: #CCC;
+.clear {
+    clear: both
 }
 
-.element::first-letter {
-    font-size: 3rem;
-    color: #0F0
+.task {
+    background-color: #343434;
 }
 
-.element::first-line {
-    background-color: #F00
+.task .child {
+    color: #FFF;
+    text-align: center;
+    float: left;
+    width: calc(100% / 3);
+    padding: 10px;
 }
 
-.element::selection {
-    color: #DDD;
-    background-color: #4e4e4e;
-}
-
-.second::before {
-    content:"from css ";
-    color:red;
+.task .child div {
+    background-color: #6f6f6f;
+    height: 50px;
+    padding-top: 16px;
     font-weight: bold;
+    font-size: 1.25rem;
 }
 
-.second::after {
-    content:"from css "
+.child:first-child,
+.child:nth-child(2) {
+    width: 50%;
 }
-
-
-/* Idea about After and before */
