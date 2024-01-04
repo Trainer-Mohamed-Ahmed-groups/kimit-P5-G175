@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
 :root {
     scroll-behavior: smooth;
+    --header_bg: #212934;
+    --intro_bg: #efefef;
+    --footer_bg: #1d242d;
+    /*? ************ Colors ************ */
+    --gold: #ede861;
+    --star_color: #bcbcbc;
+    /*? **** Main colors ****  */
+    --primary_color: #678588;
+    --brand_color: #59ab6e;
+    --dark_color: #21262b;
+    --light_color: #bfbfbf;
+    --header_color: #cfd6e1;
 }
 
 body {
@@ -8,115 +22,205 @@ body {
 
 * {
     box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    transition: .3s all ease-in-out;
 }
 
-.animation_example {
-    height: 150px;
-    width: 150px;
-    background-color: #666222;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: firstAnimation 2s ease-in-out infinite forwards alternate
-}
+/*? **************************** Global styles  *************************************/
 
-.reload {
-    height: 50px;
-    width: 50px;
-    border: 5px solid #222;
-    margin: 50px auto;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: loading .5s linear infinite
-}
-
-@keyframes firstAnimation {
-
-    /* 0%,
-    100% {
-        transform: translateX(0);
-    } */
-
-    25% {
-        transform: translateX(450px);
-    }
-
-    50% {
-        transform: translateY(450px) translateX(450px);
-    }
-
-    75% {
-        transform: translateY(450px) translateX(0);
-    }
-}
-
-@keyframes loading {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.parent {
-    height: 500px;
-    background-color: #080;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
-
-.child {
-    height: 100px;
-    width: 250px;
-    background-color: #F00;
-    font-size: 4rem;
-    line-height: 100px;
-    text-align: center;
-    color: #FFF;
-}
-
-/* .child:first-child {
-    order: 1;
-}
-
-.child:nth-child(2) {
-    flex-grow: 1;
-}
-
-.child:nth-child(3) {
-    flex-grow: 2;
-} */
-
-p {
-    font-size: 3rem;
-    margin: 50px;
-    text-shadow: 3px 3px 10px;
-}
-
-.box {
-    height: 200px;
-    width: 200px;
-    background-color: #888;
+.container {
+    width: 80%;
     margin: auto;
-    box-shadow: -7px 12px 34px 32px #080
 }
 
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align_center {
+    align-items: center;
+}
+
+.justify_between {
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+li {
+    list-style: none;
+}
+
+.section_title,
+.section_description {
+    text-align: center;
+    font-weight: 300;
+}
+
+.section_title {
+    font-size: 2.5rem;
+}
+
+button {
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #FFF;
+    background-color: var(--brand_color);
+}
+
+/*? ****************************** Start header  *******************************/
+header {
+    height: 30px;
+    background-color: var(--header_bg);
+    color: var(--header_color);
+    font-size: .8rem;
+}
+
+header .container {
+    height: 100%;
+}
+
+header .left .mail {
+    margin-right: 10px;
+}
+
+header i {
+    margin: 3px;
+}
+
+@media (max-width:500px) {
+    header {
+        height: auto;
+    }
+
+    header .container {
+        flex-direction: column;
+    }
+
+    header .left,
+    header .right {
+        margin: 5px 0;
+    }
+}
+
+/*? ****************************** End header  *******************************/
+/*? ****************************** Start navbar  *******************************/
+nav .left img {
+    width: 80px;
+}
+
+nav ul {
+    width: 50%;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: var(--header_bg);
+    font-weight: 400;
+}
+
+nav ul li a:hover,
+nav .right i:hover {
+    color: var(--brand_color)
+}
+
+nav .right i {
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+nav .right i span {
+    position: absolute;
+    top: -9px;
+    right: -12px;
+    background: var(--intro_bg);
+    padding: 4px;
+    border-radius: 11px;
+    font-weight: 700;
+    font-size: .7rem;
+    height: 15px;
+    line-height: 8px;
+}
 
 @media (max-width:600px) {
-    :root {
-        font-size: 4px;
+    nav .container {
+        flex-direction: column;
+        padding-bottom: 10px;
     }
 
-    p {
-        margin: 0;
+    nav img {
+        width: 60px;
+    }
+
+    nav ul {
+        width: 100%;
+        margin-bottom: 1.5rem;
     }
 }
 
-@media (min-width:601px) and (max-width:1000px) {
-    :root {
-        font-size: 10px;
+/*? ****************************** End navbar  *******************************/
+/*? ****************************** Start intro  *******************************/
+.intro {
+    background-color: var(--intro_bg);
+    padding: 4% 0;
+}
+
+.intro .left,
+.intro .right {
+    width: 40%;
+}
+
+.intro .right img {
+    max-width: 100%;
+}
+
+@media (max-width:800px) {
+    .intro .container {
+        flex-direction: column;
+    }
+}
+
+/*? ****************************** End intro  *******************************/
+/*? ****************************** Start categories  *******************************/
+.categories .product {
+    width: 30%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.categories .product img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--primary_color)
+}
+
+@media (max-width:700px) {
+    .categories .products_container {
+        justify-content: center;
     }
 
-    p {
-        margin: 20px;
+    .categories .product {
+        width: 60%;
+    }
+}
+
+/*? ****************************** End categories  *******************************/
+
+@media (max-width:700px) {
+    :root {
+        font-size: 12px;
+    }
+
+    button {
+        height: 25px;
+        width: 65px;
     }
 }
