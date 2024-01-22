@@ -1,60 +1,80 @@
-(() => {
-    'use strict'
+console.log("Hello Javascript")
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
+// Declaration
+var x;
 
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
+// Assignment && Initialization
+x = 8;
 
-            form.classList.add('was-validated')
-        }, false)
-    })
-})()
-
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-const appendAlert = (message, type) => {
-    const wrapper = document.createElement('div')
-    wrapper.innerHTML = [
-        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-        `   <div>${message}</div>`,
-        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-        '</div>'
-    ].join('')
-
-    alertPlaceholder.append(wrapper)
-}
-
-const alertTrigger = document.getElementById('liveAlertBtn')
-if (alertTrigger) {
-    alertTrigger.addEventListener('click', () => {
-        appendAlert('Nice, you triggered this alert message!', 'success')
-    })
-}
+// Usage
+console.log(x)
 
 
-const exampleModal = document.getElementById('exampleModal')
-if (exampleModal) {
-    exampleModal.addEventListener('show.bs.modal', event => {
-        // Button that triggered the modal
-        const button = event.relatedTarget
-        // Extract info from data-bs-* attributes
-        const recipient = button.getAttribute('data-bs-whatever')
-        // If necessary, you could initiate an Ajax request here
-        // and then do the updating in a callback.
+var y = 6;
+console.log(y)
 
-        // Update the modal's content.
-        const modalTitle = exampleModal.querySelector('.modal-title')
-        const modalBodyInput = exampleModal.querySelector('.modal-body input')
-        const modalBodyTextArea = exampleModal.querySelector('.modal-body textarea')
+console.log(x + y)
+console.log(x * y)
 
-        modalTitle.textContent = `New message to ${recipient}`
-        modalBodyInput.value = recipient
-        modalBodyTextArea.value = recipient
-    })
-}
+var a = 5,
+    b = 9,
+    c = a + b;
+
+console.log(c)
+
+
+/************************* String *********************************/
+var myName = "Mohamed ",
+    lastName = "Ahmed";
+
+// Concatenation
+
+console.log(myName + lastName)
+console.log(typeof myName)
+/************************************************
+// alert("Hello from alert")
+
+var username = prompt("Please enter your name"),
+    userLastName = prompt("Please enter your last name"),
+    age = prompt("Please enter your age ");
+
+console.log(username)
+console.log(userLastName)
+
+alert("Hello " + username + " your full name is :  " + username + " " + userLastName + " and your age is " + age)*/
+
+/************************* Number *********************************/
+
+var userAge = 30;
+
+console.log(userAge * 365)
+console.log(typeof userAge)
+
+/*
+var firstNum = Number(prompt("Please enter your first number")),
+    secondNum = +prompt("Please enter your second number");
+
+console.log(firstNum + secondNum)
+console.log(typeof firstNum)
+*/
+
+
+/************************* Boolean *********************************/
+
+var isSubmitted = false;
+
+console.log(isSubmitted)
+
+
+console.log(5 > 40)
+/************************* Undefined  *********************************/
+var i;
+
+console.log(i)
+console.log(typeof i)
+
+
+/************************* Null  *********************************/
+var j = document.getElementById("test");
+
+console.log(j)
