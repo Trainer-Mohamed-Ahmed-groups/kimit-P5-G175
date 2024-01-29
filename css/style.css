@@ -1,3 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800');
+
+:root {
+    --brand_color: #e99c39;
+    --font_one: #616163;
+    --font-two: #9e9388;
+    --products_bg: #d9d9d9;
+    --green_color: #47d93c;
+    --brown_color: #d8924c;
+    --active_star: #efce4a;
+    --star: #a9a9a9;
+}
+
 body {
+    /* background-color: #888; */
     height: 5000px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    /* transition: .2s all ease-in-out; */
+}
+
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: var(--brand_color)
+}
+
+.brand,
+.nav-link:hover {
+    color: var(--brand_color)
+}
+
+.counter {
+    font-size: .6rem;
+    line-height: 10px;
+}
+
+.carousel {
+    background-color: var(--font-two);
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 15px;
+    width: 15px;
+}
+
+.custom_indicator {
+    border-color: var(--brand_color) !important;
+}
+
+.popular_card {
+    background-color: var(--star);
+}
+
+.arrival_container {
+    height: 200px;
+    width: 150px;
+    line-height: 200px;
+    background-color: var(--products_bg);
+}
+
+.sale::after {
+    content: "sale";
+    position: absolute;
+    top: 15px;
+    right: 0;
+    height: 20px;
+    width: 40px;
+    color:#FFF;
+    line-height: 20px;
+}
+.green::after{
+    background-color: var(--green_color);
+}
+.brown::after{
+    background-color: var(--brand_color);
 }
