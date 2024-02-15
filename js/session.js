@@ -1,123 +1,123 @@
-var person = {
-    name: "Ali",
-    age: 30,
-    gender: "male",
-    calcAgeInDays: function () {
-        return person.age * 365;
-    }
-}
+var x = 100;
 
-console.log(person.age)
-console.log(person.calcAgeInDays())
+console.log(x)
 
-function sayHello(name = "Not person") {
-    console.log("Hello " + name)
-}
-
-sayHello("Mohamed")
-sayHello("Ali")
-sayHello()
-
-function calcAge(x) { return 2024 - x }
+x %= 3;
+// x = x / 5
+// 100 = 100 + 5
+console.log(x)
 
 
-function calcDays(x) { return 365 * x }
+/**** Assignment operators ****** */
 
-// var username = prompt("Please enter your name "),
-//     userBirth = +prompt("Please enter your age"),
-//     age = calcAge(userBirth),
-//     ageInDays = calcDays(age);
+/*
+>>>>
 
+=
++=
+-=
+*=
+/=
+%=
 
-// console.log(username)
-// console.log(userBirth)
-// console.log(age)
-// console.log("Hello " + username + " your age is " + age + " and your age in days is " + ageInDays)
-
-var x = 10;
-
-if (x > 0) {
-    console.log("Positive")
-    if (5 > 0) { console.log("OK") }
-}
-else if (x < 0) {
-    console.log("Negative")
-}
-else {
-    console.log("ZERO")
-}
-console.log("********************")
-
-
-if (x = 5) {
-    console.log("I am five")
-}
-else {
-    console.log("Not five")
-}
-
-
-var y = 5;
-
-console.log(++y)
-
-console.log(--y)
-
-console.log(y)
-
-// Rana    6 4 5
-// Bavley  undefined undefined 5
-// Mina    6 5 5
-// Ibrahim 6 5 5 
-// Esraa   6 4 5
-// Mazen   6 5 5 
-
-// Mohamed  5 6 5
-
-var z = 10;
-
-console.log(z++)
-console.log(z)
-console.log(--z)
-console.log(--z)
-console.log(z--)
-console.log(z++)
-console.log(++z)
-
-// Esraa    10 11 10 9 9 8 10
-// Mina     10 11 10 9 9 9 10
-// Rana     10 11 10 9 9 8 10
-// Mazen    10 11 10 9 9 9 10
-// Ibrahim  10 11 10 9 9 8 10
-// Bavley   10 11 10 9 9 8 10
-//          10 11 10 9 9 8 10 
-
-console.log(12 % 3)
+*/
 
 
 
-console.log(15 % 2)
 
 
-var t = "5";
+/**** Logical operators ****** */
+/*
+>>>>>>
 
-if (t !== 5) {
-    console.log("OK")
+! Not
+
+
+
+*/
+
+console.log(!true)
+
+if (5 > 4 && 20 > 60) {
+    console.log("YES")
 }
 else {
     console.log("NO")
 }
 
-var userInput = +prompt("Please enter your number")
 
-if (userInput % 2 === 0) {
-    console.log("This is even number")
+if (5 > 4 || 8 > 20) {
+    console.log("YES")
 }
 else {
-    console.log("This is odd number")
+    console.log("NO")
 }
 
-var testOne = +prompt("Enter one")
-var testTwo = +prompt("Enter one")
+console.log(20 > 60 && 8 > 8); // false
+console.log(20 > 6 && 88 > 8); // true
+console.log(20 > 6 || 7 > 8); // true
+console.log(20 > 76 || 7 > 8); // false
 
-console.log(testOne % testTwo)
+// Role : AND operator return last true and first false
+
+
+console.log(5 && 8 && "Ali") // Ali => Last true
+
+
+console.log(5 && 0 && "Ali") // 0 => first false
+
+// Role :  OR operator return first true and last false
+
+console.log(5 || 3) // 5 => First true
+
+console.log(0 || 3) // 3  => First true
+
+console.log(0 || false) // 3  => Last false
+
+
+console.log(5 && undefined) // undefined
+
+console.log(5 && undefined && "") // undefined
+
+/******************************************* switch *******************************************/
+
+var t = "10";
+
+
+switch (t) {
+    case 1:
+        console.log("I am one");
+        break;
+    case 2:
+        console.log("I am two");
+        break;
+    default:
+        console.log("NOT 1 OR 2")
+}
+
+
+var userInput = +prompt("Please enter day number");
+
+
+function tellDayName(num) {
+    switch (num) {
+        case 1:
+            console.log("It is Saturday")
+            break;
+        case 2:
+            console.log("It is Sunday")
+            break;
+        case 3:
+            console.log("It is Monday")
+            break;
+
+
+        default:
+            console.log("Invalid day")
+            break;
+    }
+}
+
+
+
+tellDayName(userInput)
