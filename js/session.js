@@ -1,122 +1,104 @@
-"use strict";
-var x = 5;
-var y = 10
-try {
-    console.log(y)
-} catch (error) {
-    console.error("Special error : " + error.message)
-}
-finally {
-    console.log("Finished")
-}
-
-console.log(x)
-
-console.log(isNaN("dfg"))
-
-console.log(5 * "A")
-console.log(40 / 0)
+var myName = "Mohamed",
+    lastName = "Ahmed",
+    job = "frontend developer and frontend instructor";
 
 
-console.log("**********************")
+/**************************** length ************************************
+console.log(myName.length);
 
-function calculateArea(width, height) {
-    // if (isNaN(width) || isNaN(height)) {
-    if (typeof width !== 'number' || typeof height !== 'number') {
-        throw new Error("One of them is not a number")
-    }
-    else {
-        return width * height
-    }
-}
+/**************************** charAt ************************************
 
+console.log(myName.charAt(5))
+/**************************** charCodeAt ***************************
 
-try {
+console.log(lastName.charCodeAt(1))
 
-    console.log(calculateArea(5, "w"))
-} catch (error) {
-    console.error("Custom error : " + error.message)
-}
+/**************************** fromCharCode ************************************
 
+console.log(String.fromCharCode(67))
+/**************************** concat ************************************
 
-console.log(calculateArea(5, 8))
+console.log(myName.concat(" ", lastName, " => ", job));
 
+/**************************** startsWith ************************************
 
-// consoe.log("fgsdfg")
+console.log(job.startsWith("front"))
 
+/**************************** endsWith ************************************
 
-// t = 15;
+console.log(job.endsWith("instructor"))
 
-// console.log(t)
+/**************************** includes ************************************
 
+console.log(job.includes("and"))
 
-/****************************** While loop ******************************/
-var u = 0;
+/**************************** indexOf ************************************
 
-while (u <= 10) {
-    console.log(u)
-    u++
-}
+console.log(job.indexOf("e"))
+console.log(job.indexOf("z"))
 
-console.log("********************")
+/**************************** lastIndexOf ************************************
 
+var username = "ibrahim"
 
-var r = 10;
+console.log(username.lastIndexOf("i"))
 
-while (r >= 0) {
-    console.log(r)
-    r--
-}
-console.log("********************")
+/**************************** match ************************************
 
-/****************************** Do while loop ******************************/
+// console.log(job.match("front"))
+console.log(job.match(/frOnt/ig))
 
-var i = 100
-do {
-    console.log(i)
-    i++
-} while (i < 10);
+/**************************** repeat ************************************
+console.log(myName.repeat(5))
+console.log("*".repeat(20))
 
-console.log("********************")
+/**************************** replace ************************************
 
-/****************************** For loop ******************************/
+// console.log(job.replace("front", " new "))
+console.log(job.replace(/front/g, "new "))
 
-for (var q = 0; q <= 10; q++) {
-    console.log(q)
-}
+// gi
+/**************************** search ************************************
+console.log(job.search("developer"))
 
+/**************************** slice ******************VIMP******************
 
-var people = ["Mohamed", "Mina", "Rana", "Bavly", "Ibrahim", "Esraa"]
+console.log(job.slice(10))
 
-for (var index = 0; index < people.length; index++) {
-    console.log(people[index])
-}
+/**************************** split *********************VIMP***************
 
-console.log("********************")
+console.log(job.split(" "))
 
-for (var index = people.length - 1; index >= 0; index--) {
-    console.log(people[index])
-}
+/**************************** substr ************************************
+console.log(myName.substr(1, 3))
 
-console.log("********************")
+/**************************** substring ************************************
+console.log(myName.substring(1, 3))
 
-for (var o = 0; o <= 10; o += 2) {
-    console.log(o)
-}
+/**************************** toLowerCase ************************************
 
-console.log("********************")
+console.log(myName.toLowerCase())
 
-for (var o = 0; o <= 10; o++) {
-    if (o % 2 == 1) { continue } // skip odd numbers
-    console.log(o)
-}
+/**************************** toUpperCase ************************************
+
+console.log(myName.toUpperCase())
+/**************************** trim ************************************
+
+var newJob = "             Front  end         developer             ";
+
+console.log(newJob);
+console.log(newJob.trim());
+console.log(newJob.trimStart());
+console.log(newJob.trimEnd());
+*/
 
 
+/*
+JS task 
 
-console.log("********************")
-
-for (var g = 0; g <= 10; g++) {
-    // if (g == 5) { continue }
-    if (g == 5) { break }
-    console.log(g)
-}
+Task 1
+    Create an array include some names then check the names starts with letter m or not 
+    Then print in console   this name starts with letter m 
+    Use array with some capital and small example ["Mohamed" , "mahmoud" , "Ali" ] want to output mohamed and mahmoud
+-------------------------------
+*/
