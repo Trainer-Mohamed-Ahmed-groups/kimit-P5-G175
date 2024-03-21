@@ -1,0 +1,16 @@
+
+// This is variables SASS comment
+@import"./helpers/variables";
+
+@import"./layout/navbar";
+@import "./components/btn";
+
+
+.test {
+    font-weight: bold;
+    color: red;
+}
+
+// sass -w sass:css
+
+//  sass -w sass:css --style compressed

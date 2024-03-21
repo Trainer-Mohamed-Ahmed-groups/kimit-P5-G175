@@ -1,0 +1,20 @@
+nav {
+  text-align: center;
+  background-color: #fff;
+  transition: .5s all;
+  /* CSS comment */ }
+  nav li {
+    list-style-position: inside; }
+    nav li:nth-child(2) {
+      color: #888; }
+    nav li > a {
+      text-decoration: none; }
+
+.button {
+  background: #000; }
+
+.test {
+  font-weight: bold;
+  color: red; }
+
+/*# sourceMappingURL=style.css.map */
